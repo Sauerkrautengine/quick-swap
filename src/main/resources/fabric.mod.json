@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "aka_hotkey_manager",
+  "id": "quick_swap_hotkeys",
   "version": "${version}",
   "name": "Quick Swap Hotkeys",
   "description": "Totem in die Offhand und Elytra/Brustplatte wechseln per Hotkey.",
@@ -14,7 +14,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "com.akahotkeymanager.AkaHotkeyManagerClient"
+      "com.quickswaphotkeys.QuickSwapHotkeysClient"
     ]
   },
   "depends": {
