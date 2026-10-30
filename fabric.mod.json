@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "aka_hotkey_manager",
+  "version": "${version}",
+  "name": "Aka Hotkey Manager",
+  "description": "Totem in die Offhand und Elytra/Brustplatte wechseln per Hotkey.",
+  "authors": [
+    "TriggeredGamerX (Original)"
+  ],
+  "contact": {
+    "sources": "https://github.com/TriggeredGamerX/AkaHotkeyManager"
+  },
+  "license": "LGPL-3.0-or-later",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.akahotkeymanager.AkaHotkeyManagerClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
