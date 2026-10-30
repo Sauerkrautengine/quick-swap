@@ -2,15 +2,15 @@
   "schemaVersion": 1,
   "id": "aka_hotkey_manager",
   "version": "${version}",
-  "name": "Aka Hotkey Manager",
+  "name": "Quick Swap Hotkeys",
   "description": "Totem in die Offhand und Elytra/Brustplatte wechseln per Hotkey.",
   "authors": [
-    "TriggeredGamerX (Original)"
+    "Sauerkrautengine"
   ],
   "contact": {
-    "sources": "https://github.com/TriggeredGamerX/AkaHotkeyManager"
+    "sources": "https://github.com/Sauerkrautengine/aka-hotkey-manager-26-3"
   },
-  "license": "LGPL-3.0-or-later",
+  "license": "MIT",
   "environment": "client",
   "entrypoints": {
     "client": [
