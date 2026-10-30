@@ -1,4 +1,4 @@
-package com.akahotkeymanager;
+package com.quickswaphotkeys;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import net.fabricmc.api.ClientModInitializer;
@@ -18,9 +18,9 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 
-public class AkaHotkeyManagerClient implements ClientModInitializer {
+public class QuickSwapHotkeysClient implements ClientModInitializer {
 
-    public static final String MOD_ID = "aka_hotkey_manager";
+    public static final String MOD_ID = "quick_swap_hotkeys";
 
     private static final int CHEST_SLOT = 6;
     private static final int INV_START = 9;
@@ -36,9 +36,9 @@ public class AkaHotkeyManagerClient implements ClientModInitializer {
                 Identifier.fromNamespaceAndPath(MOD_ID, "main"));
 
         totemKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.aka_hotkey_manager.totem", InputConstants.KEY_X, category));
+                "key.quick_swap_hotkeys.totem", InputConstants.KEY_X, category));
         elytraKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.aka_hotkey_manager.elytra", InputConstants.KEY_G, category));
+                "key.quick_swap_hotkeys.elytra", InputConstants.KEY_G, category));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (totemKey.consumeClick()) {
@@ -60,7 +60,6 @@ public class AkaHotkeyManagerClient implements ClientModInitializer {
 
         for (int i = INV_START; i <= HOTBAR_END; i++) {
             if (menu.getSlot(i).getItem().is(Items.TOTEM_OF_UNDYING)) {
-                // Button 40 tauscht mit der Offhand
                 mc.gameMode.handleContainerInput(menu.containerId, i, 40, ContainerInput.SWAP, player);
                 return;
             }
