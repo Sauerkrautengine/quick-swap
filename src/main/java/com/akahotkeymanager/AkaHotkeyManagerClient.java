@@ -17,7 +17,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
-import org.lwjgl.glfw.GLFW;
 
 public class AkaHotkeyManagerClient implements ClientModInitializer {
 
@@ -37,9 +36,9 @@ public class AkaHotkeyManagerClient implements ClientModInitializer {
                 Identifier.fromNamespaceAndPath(MOD_ID, "main"));
 
         totemKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.aka_hotkey_manager.totem", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_X, category));
+                "key.aka_hotkey_manager.totem", InputConstants.KEY_X, category));
         elytraKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-                "key.aka_hotkey_manager.elytra", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_G, category));
+                "key.aka_hotkey_manager.elytra", InputConstants.KEY_G, category));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (totemKey.consumeClick()) {
