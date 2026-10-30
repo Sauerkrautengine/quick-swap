@@ -17,7 +17,7 @@ jobs:
       - run: gradle build
       - uses: actions/upload-artifact@v4
         with:
-          name: aka-hotkey-manager-mod
+          name: quick-swap-hotkeys-mod
           path: |
             build/libs/*.jar
             !build/libs/*-sources.jar
